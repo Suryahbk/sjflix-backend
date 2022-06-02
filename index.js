@@ -16,6 +16,10 @@ mongoose.connect(process.env.MONGODB_URI, () => {
     console.log("Connected Successfully to Mongodb")
 });
 
+app.get("/",(req,res)=>{
+    res.send("Backend is working properly.")
+})
+
 app.use(routes.signin);
 app.use(routes.signup);
 app.use(routes.signinWithID);
